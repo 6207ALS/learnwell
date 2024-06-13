@@ -5,7 +5,7 @@ function Header(): JSX.Element {
   return (
 		<header id="header_container">
 			<div id="company-title_container">
-				<h1>Learnwell</h1>
+				<Link to="/"><h1>Learnwell</h1></Link>
 			</div>
 			<nav id="nav_container">
 				<Link to="/about">About Us</Link>
