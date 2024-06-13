@@ -9,7 +9,12 @@ import {
   HomePage,
   VideoPage,
   VideosPage,
+  AboutPage,
+  MissionPage,
 } from "./components/pages"
+
+import "./App.css"
+import "./reset.css"
 
 function App() {
   return (
@@ -17,6 +22,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />}/>
+
+          <Route path="/about" element={<AboutPage />}/>
+          <Route path="/mission" element={<MissionPage />}/>
+
           <Route path="/videos/:user_id" element={<VideosPage />}/>
           <Route path="/video/:video_id" element={<VideoPage />}/>
         </Routes>
