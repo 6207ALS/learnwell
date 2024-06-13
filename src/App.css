@@ -18,8 +18,17 @@
 	--sand: #F0DBA5;
 	--soft-black: #353839;
 	--aqua: #49ba98;
-	--navy: #3e5f72;
-	--gold: #ffc44e;
+	--navy: #3E5F72;
+	--gold: #FFC54E;
+}
+
+html {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar {
+	display: none;
 }
 
 html, a, button {
@@ -28,9 +37,6 @@ html, a, button {
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
-
 	background-color: var(--sand);
 	display: flex;
 	flex-direction: column;
@@ -39,7 +45,7 @@ body {
 }
 
 body::before {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   content: '';
@@ -50,7 +56,7 @@ body::before {
 }
 
 body::before {
-  background: #8C8C8C;
+  background: #cbcbcbcd;
   filter: url(#noiseFilter);
 }
 
@@ -64,7 +70,7 @@ button {
 
 div[id$="page_container"] {
 	width: 90vw;
-	height: 95vh;
+	min-height: 95vh;
 	display: flex;
 	flex-direction: column;
 }
