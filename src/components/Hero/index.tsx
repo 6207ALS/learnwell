@@ -9,15 +9,15 @@ function Hero() {
 					<h2>Transform your education with media.</h2>
 				</div>
 				<div id="hero-buttons_container">
-					<button className="hero_button">Watch Videos</button>
 					<button className="hero_button">Learn More</button>
+					<button className="hero_button">Watch Videos</button>
 				</div>
 			</div>
 			<div id="hero-right_container">
 				<div id="hero-blobs_container">
-					<div className="blob" id="blob-aqua"></div>
-					<div className="blob" id="blob-navy"></div>
-					<div className="blob" id="blob-gold"></div>
+					<div className="hero-blob" id="blob-aqua"></div>
+					<div className="hero-blob" id="blob-navy"></div>
+					<div className="hero-blob" id="blob-gold"></div>
 				</div>
 			</div>
 		</div>

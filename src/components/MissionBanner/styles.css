@@ -1,0 +1,25 @@
+#mission-banner_container {
+	height: 95vh;
+	border-bottom: 1px solid black;
+}
+
+.mission-blob {
+
+	width: 10vw;
+	height: 10vw;
+
+	border-radius: 100%;
+	position: absolute;
+	/* filter: blur(60px); */
+	filter: blur(3.4vw);
+	z-index: -2;
+	background-color: var(--aqua);
+}
+
+#blob-red {
+	top: 
+}
+
+#blob-blue {}
+
+#blob-yellow {}
