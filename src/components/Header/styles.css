@@ -3,4 +3,14 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+
+	a {
+		font-size: 2vw;
+	}
+}
+
+#nav_container {
+	a {
+		padding: 0 1vw;
+	}
 }
