@@ -13,15 +13,15 @@ function MissionBody() {
 				<img src={educationImage} />
 				<div className="mission-text_container">
 					<h1>Empowering students with <i>quality</i> education.</h1>
-					<h2>Our mission is to create a platform where every learner can thrive with high-quality educational videos.</h2>
+					<h2>Our mission is to create a platform where every student can thrive with high-quality educational videos.</h2>
 				</div>
 			</div>
 			<div className="mission-section_container">
-				<img src={globalImage} />
 				<div className="mission-text_container">
 					<h1>Making education <i>accessible</i>.</h1>
-					<h2>Join our global community that's committed to making learning accessible for everyone, everywhere.</h2>
+					<h2>Join our global community that's committed to making education accessible for everyone, everywhere.</h2>
 				</div>
+				<img src={globalImage} />
 			</div>
 			<div className="mission-section_container">
 				<img src={growImage} />

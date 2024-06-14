@@ -10,7 +10,6 @@ function Blobs(): JSX.Element {
 
   useEffect(() => {
     const path = location.pathname;
-    console.log(path);
     if (path === "/") {
       if (blobA.current) blobA.current.className = "blob hero-aqua"
       if (blobB.current) blobB.current.className = "blob hero-navy"
