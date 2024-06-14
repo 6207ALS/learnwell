@@ -16,8 +16,12 @@ function Blobs(): JSX.Element {
       if (blobC.current) blobC.current.className = "blob hero-gold"
     } else if (path === "/mission") {
       if (blobA.current) blobA.current.className = "blob mission-red"
-      if (blobB.current) blobB.current.className = "blob mission-blue"
-      if (blobC.current) blobC.current.className = "blob mission-yellow"
+      if (blobB.current) blobB.current.className = "blob mission-yellow"
+      if (blobC.current) blobC.current.className = "blob mission-blue"
+    } else if (path === "/about") {
+      if (blobA.current) blobA.current.className = "blob about-blue"
+      if (blobB.current) blobB.current.className = "blob about-pink"
+      if (blobC.current) blobC.current.className = "blob about-purple"
     }
   }, [location])
 

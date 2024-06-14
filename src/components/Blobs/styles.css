@@ -60,6 +60,19 @@
 	background-color: var(--mission-yellow);
 }
 
+.about-blue {
+	background-color: var(--about-blue);
+}
+
+.about-purple {
+	background-color: var(--about-purple);
+}
+
+.about-pink {
+	background-color: var(--about-pink);
+}
+
+
 @keyframes A {
 	0% {
 		top: 10%; left: 60%; transform: scale(1);
