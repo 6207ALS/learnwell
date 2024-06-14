@@ -17,9 +17,16 @@
 	--light-sand: #c7bd9f;
 	--sand: #F0DBA5;
 	--soft-black: #353839;
-	--aqua: #49ba98;
-	--navy: #3E5F72;
-	--gold: #FFC54E;
+
+	--hero-aqua: #49ba98;
+	--hero-navy: #3E5F72;
+	--hero-gold: #FFC54E;
+
+	--mission-red: #fe9e7e;
+	--mission-blue: #7dc3ff;
+	--mission-yellow: #ffe282;
+
+	
 }
 
 html {
