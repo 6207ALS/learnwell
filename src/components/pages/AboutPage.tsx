@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import Header from "../Header"
+import AnimatedPage from '../AnimatedPage'
 
 function AboutPage() {
   return (
-		<div id="about-page_container">
-			<Header />
-			<h1>About Us!</h1>
-		</div>
+		<AnimatedPage>
+			<div id="about-page_container">
+				<h1>About us!</h1>
+			</div>
+		</AnimatedPage>
   )
 }
 

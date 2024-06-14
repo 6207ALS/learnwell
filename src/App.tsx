@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 
 import { BrowserRouter as Router, 
-  Route, Link, Routes,
+  Route, Link, Routes, useLocation
 } from "react-router-dom"
+
 
 import { 
   HomePage,
@@ -12,7 +13,7 @@ import {
   MissionPage,
 } from "./components/pages"
 
-import BlobsLayout from "./components/BlobLayout"
+import BlobsLayout from "./components/BlobsLayout"
 
 import "./App.css"
 import "./reset.css"
