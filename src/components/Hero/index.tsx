@@ -3,22 +3,13 @@ import "./styles.css"
 function Hero() {
   return (
 		<div id="hero_container">
-			<div id="hero-left_container">
-				<div id="hero-text_container">
-					<h1>Learn and Excel.</h1>
-					<h2>Transform your education with media.</h2>
-				</div>
-				<div id="hero-buttons_container">
-					<button className="hero_button">Learn More</button>
-					<button className="hero_button">Watch Videos</button>
-				</div>
+			<div id="hero-text_container">
+				<h1>Learn and Excel.</h1>
+				<h2>Transform your education with media.</h2>
 			</div>
-			<div id="hero-right_container">
-				<div id="hero-blobs_container">
-					<div className="hero-blob" id="blob-aqua"></div>
-					<div className="hero-blob" id="blob-navy"></div>
-					<div className="hero-blob" id="blob-gold"></div>
-				</div>
+			<div id="hero-buttons_container">
+				<button className="hero_button">Learn More</button>
+				<button className="hero_button">Watch Videos</button>
 			</div>
 		</div>
   )

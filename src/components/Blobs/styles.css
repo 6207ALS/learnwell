@@ -1,0 +1,115 @@
+
+#blobs_container {
+	position: absolute;
+	width: 50vw;
+	height: 50vh;
+	top: 25%;
+	right: 10%;
+}
+
+.blob {
+	border-radius: 100%;
+	position: absolute;
+	/* filter: blur(60px); */
+	filter: blur(3.4vw);
+	
+	transition: background-color 2s ease;
+	z-index: -2;
+}
+
+#blob-A {
+	width: 16vw;
+	height: 16vw;
+
+	animation: A 8s infinite ease;
+}
+
+#blob-B {
+	width: 16vw;
+	height: 14vw;
+	animation: B 8s infinite ease;
+}
+
+#blob-C {
+	width: 16vw;
+	height: 14vw;
+	animation: C 8s infinite ease;
+}
+
+.hero-aqua {
+	background-color: var(--hero-aqua);
+}
+
+.hero-navy {
+	background-color: var(--hero-navy);
+}
+
+.hero-gold {
+	background-color: var(--hero-gold);
+}
+
+.mission-red {
+	background-color: var(--mission-red);
+}
+
+.mission-blue {
+	background-color: var(--mission-blue);
+}
+
+.mission-yellow {
+	background-color: var(--mission-yellow);
+}
+
+@keyframes A {
+	0% {
+		top: 10%; left: 60%; transform: scale(1);
+	}
+
+	30% {
+		top: 25%; left: 37%; transform: scale(1.1);
+	}
+
+	60% {
+		top: 20%; left: 37%; transform: scale(1.2);
+	}
+
+	100% {
+		top: 10%; left: 60%; transform: scale(1);;
+	}
+}
+
+@keyframes B {
+	0% {
+		top: 40%; left: 65%; transform: scale(1);
+	}
+
+	30% {
+		top: 25%; left: 37%; transform: scale(1.2);
+	}
+
+	60% {
+		top: 35%; left: 37%; transform: scale(1.3);
+	}
+
+	100% {
+		top: 40%; left: 65%; transform: scale(1);
+	}
+}
+
+@keyframes C {
+	0% {
+		top: 18%; left: 40%; transform: scale(1);
+	}
+
+	30% {
+		top: 45%; left: 60%; transform: scale(1.3);
+	}
+
+	60% {
+		top: 20%; left: 60%; transform: scale(1.2);
+	}
+
+	100% {
+		top: 18%; left: 40%; transform: scale(1);
+	}
+}
