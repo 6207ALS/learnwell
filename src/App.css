@@ -25,6 +25,10 @@
 	--mission-red: #fe9e7e;
 	--mission-blue: #7dc3ff;
 	--mission-yellow: #ffe282;
+
+	--about-blue: #C9DDFF;
+	--about-purple: #ECB0E1;
+	--about-pink: #DE6C83;
 }
 
 #root {
@@ -77,7 +81,7 @@ body::before {
 }
 
 body::before {
-  background: #cbcbcbcd;
+  background: #c1c1c195;
   filter: url(#noiseFilter);
 }
 

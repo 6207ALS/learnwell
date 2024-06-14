@@ -2,19 +2,19 @@ import { motion } from "framer-motion"
 
 const AnimatedPage = ({ children }: Props): JSX.Element => {
   return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			exit={{ opacity: 0 }}
-			transition={{
-				duration: 0.5, 
-				type: "ease"
-			}}
-			className="fade"
-		>
-			{ children }
-		</motion.div>
-	)
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{
+        duration: 0.5, 
+        type: "ease"
+      }}
+      className="fade"
+    >
+      { children }
+    </motion.div>
+  )
 };
 
 export default AnimatedPage;
