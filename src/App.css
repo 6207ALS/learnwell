@@ -38,6 +38,16 @@ html::-webkit-scrollbar {
 	display: none;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: var(--light-sand);
+  background: var(--soft-black);
+}
+
+::selection {
+  color: var(--light-sand);
+  background: var(--soft-black);
+}
+
 html, a, button {
 	font-family: recoleta-regular;
 	color: var(--soft-black);
@@ -76,8 +86,14 @@ button {
 }
 
 div[id$="page_container"] {
-	width: 90vw;
-	min-height: 95vh;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+}
+
+.line-break {
+	width: 100vw;
+	border-top: 0.001vw solid var(--soft-black);
+	content: '';
 }

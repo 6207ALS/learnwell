@@ -1,11 +1,13 @@
 #header_container {
+	width: 90vw;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 
 	height: 5vw;
-	
+	z-index: 3;	
 	h1 {
 		font-size: 2vw;
 	}
@@ -14,6 +16,14 @@
 #nav_container {
 	a {
 		font-size: 1.2vw;
-		padding: 0 1vw;
+		margin: 0 1vw;
+
+		border-bottom: 0.06vw solid #35383900;
+
+		transition: border-bottom 0.3s ease;
+	}
+
+	a:hover {
+		border-bottom: 0.06vw solid #35383961;
 	}
 }
