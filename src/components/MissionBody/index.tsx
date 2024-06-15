@@ -17,11 +17,11 @@ function MissionBody() {
 				</div>
 			</div>
 			<div className="mission-section_container">
+				<img src={globalImage} />
 				<div className="mission-text_container">
 					<h1>Making education <i>accessible</i>.</h1>
 					<h2>Join our global community that's committed to making education accessible for everyone, everywhere.</h2>
 				</div>
-				<img src={globalImage} />
 			</div>
 			<div className="mission-section_container">
 				<img src={growImage} />
