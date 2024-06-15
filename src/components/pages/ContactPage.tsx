@@ -1,14 +1,14 @@
-import AnimatedPage from '../AnimatedPage'
+import AnimatedComponent from '../AnimatedComponent'
 
 import Contact from "../Contact"
 
 function HomePage() {
   return (
-    <AnimatedPage>
+    <AnimatedComponent>
       <div id="contact-page_container">
         <Contact />
       </div>
-    </AnimatedPage>
+    </AnimatedComponent>
   )
 }
 

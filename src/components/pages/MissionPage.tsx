@@ -3,16 +3,16 @@ import Header from "../Header"
 import MissionBanner from "../MissionBanner"
 import MissionBody from "../MissionBody"
 
-import AnimatedPage from '../AnimatedPage'
+import AnimatedComponent from '../AnimatedComponent'
 
 function MissionPage() {
   return (
-		<AnimatedPage>
+		<AnimatedComponent>
 			<div id="mission-page_container">
 				<MissionBanner />
 				<MissionBody />
 			</div>
-		</AnimatedPage>
+		</AnimatedComponent>
   )
 }
 

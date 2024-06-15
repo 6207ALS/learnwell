@@ -1,4 +1,6 @@
 import "./styles.css"
+import { Link } from "react-router-dom"
+
 
 function Hero() {
   return (
@@ -8,8 +10,8 @@ function Hero() {
 				<h2>Transform your education with media.</h2>
 			</div>
 			<div id="hero-buttons_container">
-				<button className="hero_button">Learn More</button>
-				<button className="hero_button">Watch Videos</button>
+				<Link to="/about" className="hero_button">Learn More</Link>
+				<Link to="/videos" className="hero_button">Watch Videos</Link>
 			</div>
 		</div>
   )

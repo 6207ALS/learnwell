@@ -1,18 +1,18 @@
 import { useState } from 'react'
 import Header from "../Header"
-import AnimatedPage from '../AnimatedPage'
+import AnimatedComponent from '../AnimatedComponent'
 
 import AboutBanner from "../AboutBanner"
 import AboutBody from "../AboutBody"
 
 function AboutPage() {
   return (
-		<AnimatedPage>
+		<AnimatedComponent>
 			<div id="about-page_container">
 				<AboutBanner />
 				<AboutBody />
 			</div>
-		</AnimatedPage>
+		</AnimatedComponent>
   )
 }
 

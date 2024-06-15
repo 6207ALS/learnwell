@@ -5,6 +5,7 @@
 	height: 50vh;
 	top: 25%;
 	right: 10%;
+	z-index: 200;
 }
 
 .blob {
@@ -27,7 +28,7 @@
 #blob-B {
 	width: 16vw;
 	height: 14vw;
-	animation: B 8s infinite ease;
+	animation: B 8s infinite ease alternate;
 }
 
 #blob-C {
