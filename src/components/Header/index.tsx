@@ -10,7 +10,7 @@ function Header(): JSX.Element {
 			<nav id="nav_container">
 				<Link to="/about">About Us</Link>
 				<Link to="/mission">Our Mission</Link>
-				<a href="mailto:6207als@gmail.com">Contact Us</a>
+				<Link to="/contact">Contact Us</Link>
 			</nav>
 		</header>
   )

@@ -19,7 +19,7 @@ function AboutBody() {
 			<div className="about-section_container">
 				<div className="about-text_container">
 					<h1>Early success and growth.</h1>
-					<h2>The first iteration of Learnwell attracted a small but passionate user base, overcoming technical and marketing challenges. Within a year, the platform hosted hundreds of videos across various subjects.</h2>
+					<h2>Our first iteration of Learnwell attracted a small but passionate user base, overcoming technical and marketing challenges. Within a year, the platform hosted hundreds of videos across various subjects.</h2>
 				</div>
 				<img src={growth} />
 			</div>
