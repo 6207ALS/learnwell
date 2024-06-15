@@ -1,17 +1,17 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import AnimatedPage from '../AnimatedPage'
+import AnimatedComponent from '../AnimatedComponent'
 
 import Header from "../Header"
 import Hero from "../Hero"
 
 function HomePage() {
   return (
-    <AnimatedPage>
+    <AnimatedComponent>
       <div id="home-page_container">
         <Hero />
       </div>
-    </AnimatedPage>
+    </AnimatedComponent>
   )
 }
 

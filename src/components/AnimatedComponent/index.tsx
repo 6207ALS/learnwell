@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-const AnimatedPage = ({ children }: Props): JSX.Element => {
+const AnimatedComponent = ({ children }: { children?: React.ReactNode}): JSX.Element => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -8,13 +8,13 @@ const AnimatedPage = ({ children }: Props): JSX.Element => {
       exit={{ opacity: 0 }}
       transition={{
         duration: 0.5, 
-        type: "ease"
+        type: "linear"
       }}
-      className="fade"
+      className="ease"
     >
       { children }
     </motion.div>
   )
 };
 
-export default AnimatedPage;
+export default AnimatedComponent;

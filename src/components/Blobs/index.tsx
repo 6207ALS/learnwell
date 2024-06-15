@@ -1,6 +1,8 @@
 import './styles.css'
 import { useLocation } from 'react-router-dom'
 import { useEffect, useRef } from 'react';
+import changeBlobColors from '../../helpers/changeBlobColors';
+
 
 function Blobs(): JSX.Element {
   const location = useLocation() 

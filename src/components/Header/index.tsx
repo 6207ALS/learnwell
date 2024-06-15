@@ -4,13 +4,13 @@ import './styles.css'
 function Header(): JSX.Element {
   return (
 		<header id="header_container">
-			<div id="company-title_container">
-				<Link to="/"><h1>Learnwell</h1></Link>
-			</div>
 			<nav id="nav_container">
-				<Link to="/about">About Us</Link>
-				<Link to="/mission">Our Mission</Link>
-				<Link to="/contact">Contact Us</Link>
+				<Link to="/"><h1>Learnwell</h1></Link>
+				<div id="nav-buttons_container">
+					<Link to="/about">About Us</Link>
+					<Link to="/mission">Our Mission</Link>
+					<Link to="/contact">Contact Us</Link>
+				</div>
 			</nav>
 		</header>
   )

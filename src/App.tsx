@@ -1,9 +1,7 @@
-import { useState, useEffect } from 'react'
-
-import { BrowserRouter as Router, 
-  Route, Link, Routes, useLocation
+import {
+  Route, 
+  Routes,
 } from "react-router-dom"
-
 
 import { 
   HomePage,
@@ -11,31 +9,31 @@ import {
   VideosPage,
   AboutPage,
   MissionPage,
-	ContactPage
+  ContactPage,
+  SignInPage
 } from "./components/pages"
 
 import BlobsLayout from "./components/BlobsLayout"
+import AppLayout from "./components/AppLayout"
 
 import "./App.css"
 import "./reset.css"
 
 function App() {
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route element={<BlobsLayout />}>
-            <Route index path="/" element={<HomePage />}/>
-            <Route path="/about" element={<AboutPage />}/>
-            <Route path="/mission" element={<MissionPage />}/>
-						<Route path="/contact" element={<ContactPage />}/>
-          </Route>
-          
-          <Route path="/videos/:user_id" element={<VideosPage />}/>
-          <Route path="/video/:video_id" element={<VideoPage />}/>
-        </Routes>
-      </Router>
-    </>
+    <Routes>
+      <Route element={<AppLayout />}>
+        <Route element={<BlobsLayout />}>
+          <Route index path="/" element={<HomePage />}/>
+          <Route path="/about" element={<AboutPage />}/>
+          <Route path="/mission" element={<MissionPage />}/>
+          <Route path="/contact" element={<ContactPage />}/>
+        </Route>
+        <Route path="/videos/:video_id" element={<VideoPage />}/>
+        <Route path="/videos" element={<VideosPage />}/>
+        <Route path="/signin" element={<SignInPage />}/>
+      </Route>
+    </Routes>
   )
 }
 

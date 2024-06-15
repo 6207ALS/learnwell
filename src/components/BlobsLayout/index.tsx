@@ -1,21 +1,15 @@
 import './styles.css'
 import Blobs from "../Blobs"
-import Header from "../Header"
 import AnimatedOutlet from "../AnimatedOutlet"
+import AnimatedComponent from '../AnimatedComponent'
 
 function BlobsLayout(): JSX.Element {
   return (
-    <>
+		<AnimatedComponent>
       <Blobs />
-			<Header />
-      <AnimatedOutlet />
-    </>
+			<AnimatedOutlet />
+		</AnimatedComponent>
   )
 }	
 
 export default BlobsLayout
-
-/*
-DIRECT CHILDREN of AnimatePresence must be 
-
-*/
