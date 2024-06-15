@@ -22,13 +22,17 @@
 	--hero-navy: #3E5F72;
 	--hero-gold: #FFC54E;
 
-	--mission-red: #fe9e7e;
-	--mission-blue: #7dc3ff;
+	--mission-red: #fb8d68;
+	--mission-blue: #7dc2ffd5;
 	--mission-yellow: #ffe282;
 
 	--about-blue: #C9DDFF;
 	--about-purple: #ECB0E1;
 	--about-pink: #DE6C83;
+
+	--contact-red: #d66950;
+	--contact-brick: #876062;
+	--contact-purple: #777DA7;
 }
 
 #root {

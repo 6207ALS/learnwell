@@ -11,6 +11,7 @@ import {
   VideosPage,
   AboutPage,
   MissionPage,
+	ContactPage
 } from "./components/pages"
 
 import BlobsLayout from "./components/BlobsLayout"
@@ -27,6 +28,7 @@ function App() {
             <Route index path="/" element={<HomePage />}/>
             <Route path="/about" element={<AboutPage />}/>
             <Route path="/mission" element={<MissionPage />}/>
+						<Route path="/contact" element={<ContactPage />}/>
           </Route>
           
           <Route path="/videos/:user_id" element={<VideosPage />}/>

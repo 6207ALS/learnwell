@@ -4,6 +4,7 @@ import VideoPage from "./VideoPage"
 
 import AboutPage from "./AboutPage"
 import MissionPage from "./MissionPage"
+import ContactPage from "./ContactPage"
 
 export {
 	HomePage,
@@ -12,4 +13,5 @@ export {
 
 	AboutPage,
 	MissionPage,
+	ContactPage,
 }

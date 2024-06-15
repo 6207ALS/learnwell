@@ -22,6 +22,10 @@ function Blobs(): JSX.Element {
       if (blobA.current) blobA.current.className = "blob about-blue"
       if (blobB.current) blobB.current.className = "blob about-pink"
       if (blobC.current) blobC.current.className = "blob about-purple"
+    } else if (path === "/contact") {
+      if (blobA.current) blobA.current.className = "blob contact-red"
+      if (blobB.current) blobB.current.className = "blob contact-brick"
+      if (blobC.current) blobC.current.className = "blob contact-purple"
     }
   }, [location])
 

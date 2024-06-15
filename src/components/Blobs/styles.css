@@ -10,7 +10,7 @@
 .blob {
 	border-radius: 100%;
 	position: absolute;
-	/* filter: blur(60px); */
+	/* filter: blur(min(60px, 3.4vw)); */
 	filter: blur(3.4vw);
 	
 	transition: background-color 2s ease;
@@ -39,37 +39,44 @@
 .hero-aqua {
 	background-color: var(--hero-aqua);
 }
-
 .hero-navy {
 	background-color: var(--hero-navy);
 }
-
 .hero-gold {
 	background-color: var(--hero-gold);
 }
 
+
 .mission-red {
 	background-color: var(--mission-red);
 }
-
 .mission-blue {
 	background-color: var(--mission-blue);
 }
-
 .mission-yellow {
 	background-color: var(--mission-yellow);
 }
 
+
 .about-blue {
 	background-color: var(--about-blue);
 }
-
 .about-purple {
 	background-color: var(--about-purple);
 }
-
 .about-pink {
 	background-color: var(--about-pink);
+}
+
+
+.contact-red {
+	background-color: var(--contact-red);
+}
+.contact-brick {
+	background-color: var(--contact-brick);
+}
+.contact-purple {
+	background-color: var(--contact-purple);
 }
 
 
