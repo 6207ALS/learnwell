@@ -3,12 +3,14 @@ import { useState, useEffect } from 'react'
 import AnimatedComponent from "../AnimatedComponent"
 import SignIn from "../SignIn"
 
-function SignInPage() {
+interface SignInPageProps {
+	handleLogin: (userID: string) => void
+}
+
+function SignInPage({ handleLogin }: SignInPageProps) {
   return (
     <AnimatedComponent>
-      <div id="signin-page_container">
-        <SignIn />
-      </div>
+      <SignIn handleLogin={handleLogin}/>
     </AnimatedComponent>
   )
 }
