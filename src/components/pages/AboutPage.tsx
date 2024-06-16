@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import Header from "../Header"
 import AnimatedComponent from '../AnimatedComponent'
 
 import AboutBanner from "../AboutBanner"

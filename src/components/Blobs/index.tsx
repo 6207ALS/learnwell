@@ -1,7 +1,6 @@
 import './styles.css'
 import { useLocation } from 'react-router-dom'
 import { useEffect, useRef } from 'react';
-import changeBlobColors from '../../helpers/changeBlobColors';
 
 
 function Blobs(): JSX.Element {
@@ -28,7 +27,13 @@ function Blobs(): JSX.Element {
       if (blobA.current) blobA.current.className = "blob contact-red"
       if (blobB.current) blobB.current.className = "blob contact-brick"
       if (blobC.current) blobC.current.className = "blob contact-purple"
-    }
+    } else if (path === "/signin") {
+      if (blobA.current) blobA.current.className = "blob about-blue"
+      if (blobB.current) blobB.current.className = "blob contact-purple"
+      if (blobC.current) blobC.current.className = "blob mission-yellow"
+    } else {
+			console.log("An error has occurred rendering the blob colors");
+		}
   }, [location])
 
   return (

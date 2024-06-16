@@ -1,8 +1,6 @@
-import { useState } from 'react'
-import { Outlet } from 'react-router-dom'
-import AnimatedComponent from '../AnimatedComponent'
+import { useState, useEffect } from 'react'
 
-import Header from "../Header"
+import AnimatedComponent from '../AnimatedComponent'
 import Hero from "../Hero"
 
 function HomePage() {
