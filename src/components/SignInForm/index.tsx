@@ -1,12 +1,13 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import "./styles.css"
 
 interface SignInFormProps {
 	originalPath?: string
+	handleLogin: (userID: string) => void
 }
 
-function SignInForm({ originalPath }: SignInFormProps) {
+function SignInForm({ originalPath, handleLogin }: SignInFormProps) {
 	const navigate = useNavigate();
 	const [ firstName, setFirstName ] = useState("");
 	const [ lastName, setLastName ] = useState("");
@@ -18,47 +19,55 @@ function SignInForm({ originalPath }: SignInFormProps) {
 	const handleSubmitForm = (e: React.FormEvent) => {
 		e.preventDefault();
 
-		const user_id = [firstName, lastName].join("_");
-		localStorage.setItem("user_id", user_id);
+		const userID = [firstName, lastName].join("_");
+		handleLogin(userID);
+	}
 
-		
+	const handleClickLeave = () => {
+		navigate("/")
 	}
 
 	const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setFirstName(e.currentTarget.value);
+		console.log(e.target.value)
+		setFirstName(e.target.value);
 	}
 
 	const handleLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setLastName(e.currentTarget.value);
+		setLastName(e.target.value);
 	}
 
   return (
-		<form id="sign-in_form" onSubmit={handleSubmitForm}>
-			<div className="sign-in-input_container">
-				<label htmlFor="first-name_input">First Name:</label>
-				<input 
-					id="first-name_input" 
-					type="text" 
-					onChange={handleFirstNameChange}
-					value={firstName}
-				/>
+		<form id="signin_form" onSubmit={handleSubmitForm}>
+			{/* <label htmlFor="first-name_input">First Name:</label> */}
+			<input
+				className="signin_input"
+				id="first-name_input" 
+				type="text" 
+				onChange={handleFirstNameChange}
+				value={firstName}
+				placeholder={"First Name"}
+			/>
+
+			{/* <label htmlFor="last-name_input">Last Name:</label> */}
+			<input 
+				className="signin_input"
+				id="last-name_input" 
+				type="text" 
+				onChange={handleLastNameChange}
+				value={lastName}
+				placeholder={"Last Name"}
+			/>
+
+			<div id="signin-buttons_container">
+				<Link to="/"className="signin_button">Cancel</Link>
+
+				<button 
+					className="signin_button"
+					type="submit"
+					disabled={validateForm()}
+				>Sign In</button>
 			</div>
 
-			<div className="sign-in-input_container">
-				<label htmlFor="last-name_input">Last Name:</label>
-				<input 
-					id="last-name_input" 
-					type="text" 
-					onChange={handleLastNameChange}
-					value={lastName}
-				/>
-			</div>
-
-			<button 
-				id="sign-in_button"
-				type="submit"
-				disabled={validateForm()}
-			>Sign In</button>
 		</form>
   )
 }

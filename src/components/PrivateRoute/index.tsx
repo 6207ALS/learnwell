@@ -2,24 +2,15 @@
 import { Navigate, useLocation  } from "react-router-dom"
 import AnimatedOutlet from "../AnimatedOutlet"
 
+interface PrivateRouteProps {
+	isAuthenticated: boolean;
+}
 
-function PrivateRoute() {
-	const location = useLocation();
-	const isLoggedIn = localStorage.getItem("user_id");
-
-	if (isLoggedIn) {
-		location
-	}
-
+function PrivateRoute({ isAuthenticated }: PrivateRouteProps) {
 	return (
-		isLoggedIn ? 
-			<AnimatedOutlet/> : 
-			<Navigate 
-				to="/login"
-				options={{
-					
-				}}
-			/>
+		isAuthenticated ? 
+			<AnimatedOutlet /> : 
+			<Navigate to="/login"/>
 	)
 }
 

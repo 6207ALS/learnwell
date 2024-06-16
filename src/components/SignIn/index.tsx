@@ -1,18 +1,20 @@
-import { useEffect, useReducer } from "react"
-import { Link } from "react-router-dom"
+import SignInText from "../SignInText"
 import SignInForm from "../SignInForm"
-
 import "./styles.css"
 
-function SignIn() {
-	return (
-		<div id="signin_container">
-			<div id="signin-text_container">
-				<h1>To continue, please sign in.</h1>
+interface SignInProps {
+	handleLogin: (userID: string) => void
+}
+
+function SignIn({ handleLogin }: SignInProps) {
+  return (
+    <div id="signin-page_container">
+			<div id="signin_container">
+				<SignInText />
+				<SignInForm handleLogin={handleLogin}/>
 			</div>
-			<SignInForm />
-		</div>
-	);
+    </div>
+  )
 }
 
 export default SignIn

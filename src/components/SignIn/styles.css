@@ -1,15 +1,13 @@
-#signin_container {
+#signin-page_container {
 	position: absolute;
-	width: 90vw;
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	top: 0;
-	z-index: -1;
+	left: 0;
+	z-index: 1;
 
 	h1 {
-		font-size: 4.5vw;
+		font-size: 3vw;
 	}
 
 	h2 {
@@ -17,30 +15,9 @@
 	}
 }
 
-#signin-text_container,
-#signin-buttons_container {
-	width: 40vw;
-}
-
-#signin-buttons_container {
+#signin_container {
+	width: 90vw;
 	display: flex;
-	justify-content: space-between;
-}
-
-.signin_button {
-	text-align: center;
-	font-size: 1.5vw;
-	padding: 0.5vw 2.2vw;
-	margin: 2vw 0;
-	width: 49%;
-	
-	border: 0.1vw solid var(--soft-black);
-	border-radius: 2vw;
-
-	transition: background-color 0.3s, color 0.3s;
-}
-
-.signin_button:hover {
-	background-color: var(--soft-black);
-	color: var(--light-sand);
+	flex-direction: column;
+	justify-content: center;
 }

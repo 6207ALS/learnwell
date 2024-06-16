@@ -60,7 +60,7 @@ html::-webkit-scrollbar {
   background: var(--soft-black);
 }
 
-html, a, button {
+html, a, button, input {
 	font-family: recoleta-regular;
 	color: var(--soft-black);
 }
