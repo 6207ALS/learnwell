@@ -49,11 +49,17 @@
 	
 	border: 0.1vw solid var(--soft-black);
 	border-radius: 2vw;
-
 	transition: background-color 0.3s, color 0.3s;
 }
 
 .signin_button:hover {
 	background-color: var(--soft-black);
 	color: var(--light-sand);
+}
+
+.signin_button:disabled,
+.signin_button:disabled:hover {
+	background: transparent;
+	border: 0.1vw solid gray;
+	color: gray;
 }
