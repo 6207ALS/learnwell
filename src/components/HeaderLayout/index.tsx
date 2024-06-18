@@ -1,15 +1,17 @@
+import Header from "../Header"
 import AnimatedOutlet from "../AnimatedOutlet"
-import needsHeader from "../../helpers/needsHeader"
+import needsBlob from "../../helpers/needsBlobs"
 import AnimatedComponent from "../AnimatedComponent"
 
 // Passes the needsBlob function to the AnimatedOutlet component
 // It determines if the Blobs component need to be re-rednerd based on the current route
-function AppLayout(): JSX.Element {
+function HeaderLayout(): JSX.Element {
   return (
 		<AnimatedComponent>
-			<AnimatedOutlet pathCondition={needsHeader}/>
+      <Header />
+			<AnimatedOutlet pathCondition={needsBlob}/>
 		</AnimatedComponent>
   )
 }	
 
-export default AppLayout
+export default HeaderLayout

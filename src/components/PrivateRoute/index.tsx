@@ -1,17 +1,21 @@
 
-import { Navigate, useLocation  } from "react-router-dom"
+import { useEffect, useContext } from "react"
+import { useNavigate, Navigate, useLocation  } from "react-router-dom"
 import AnimatedOutlet from "../AnimatedOutlet"
+import AppContext from "../../helpers/appContext"
 
-interface PrivateRouteProps {
-	isAuthenticated: boolean;
-}
+function PrivateRoute() {
+	const navigate = useNavigate();
+	const location = useLocation();
+	const { user } = useContext(AppContext);
 
-function PrivateRoute({ isAuthenticated }: PrivateRouteProps) {
-	return (
-		isAuthenticated ? 
-			<AnimatedOutlet /> : 
-			<Navigate to="/login"/>
-	)
+	useEffect(() => {
+		if (!user.isLoggedIn) {
+			navigate("/signin", { state: { from: location.pathname } });
+		}
+	}, [user.isLoggedIn, navigate, location.pathname]);
+
+	return user.isLoggedIn ? <AnimatedOutlet /> : null;
 }
 
 export default PrivateRoute

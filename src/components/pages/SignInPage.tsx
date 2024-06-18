@@ -1,16 +1,10 @@
-import { useState, useEffect } from 'react'
-
 import AnimatedComponent from "../AnimatedComponent"
 import SignIn from "../SignIn"
 
-interface SignInPageProps {
-	handleLogin: (userID: string) => void
-}
-
-function SignInPage({ handleLogin }: SignInPageProps) {
+function SignInPage() {
   return (
     <AnimatedComponent>
-      <SignIn handleLogin={handleLogin}/>
+      <SignIn />
     </AnimatedComponent>
   )
 }
