@@ -10,7 +10,7 @@ import {
   AboutPage,
   MissionPage,
   ContactPage,
-  SignInPage
+  SignInPage,
 } from "./components/pages"
 
 import HeaderLayout from "./components/HeaderLayout"

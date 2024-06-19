@@ -20,7 +20,6 @@
 	align-items: center;
 	a {
 		font-size: 1.2vw;
-		margin: 0 1vw;
 
 		border-bottom: 0.06vw solid #35383900;
 
@@ -29,5 +28,11 @@
 
 	a:hover {
 		border-bottom: 0.06vw solid #35383961;
+	}
+}
+
+#nav-buttons_container {
+	a {
+		margin: 0 0 0 2vw;
 	}
 }

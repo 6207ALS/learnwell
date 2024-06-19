@@ -1,0 +1,91 @@
+#private-header_container {
+	width: 90vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.8vw;
+	border: 0.01vw solid var(--soft-black);
+	border-radius: 0.7vw;
+	margin: 2vw 0;
+	background-color: rgba(128, 128, 128, 0.227);
+}
+
+#signout_button,
+#user-home_button {
+	font-size: 1vw;
+	border: none;
+	padding: 0.8vw 1vw;
+	width: 100%;
+	text-align: start;
+
+	transition: background-color 0.3s ease;
+}
+
+#signout_button:hover,
+#user-home_button:hover {
+	background-color: var(--soft-black);
+	color: var(--light-sand);
+}
+
+#search-video-bar_input {
+	width: 30%;
+	font-size: 1vw;
+	background: var(--light-sand); 
+	border: 0.01vw solid var(--soft-black);
+	border-radius: 1.5vw;
+	z-index: 1;
+
+	padding: 0.6vw 1.5vw; 
+
+	transition: border-bottom 0.3s ease;
+}
+
+#search-video-bar_input:focus {
+	outline: none;
+}
+
+#search-video-bar_input:focus::placeholder {
+	transition: color 0.3s ease;
+	color: var(--soft-black);
+}
+
+
+#private-header-profile_container {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	right: 0;
+	border: 0.05vw solid var(--soft-black);
+	border-radius: 0.5vw;
+	background-color: var(--light-sand);
+	top: 130%;
+	width: 20vw;
+
+	overflow: hidden;
+	transition: all 0.3s;
+	visibility: visible;
+  opacity: 1;
+	z-index: 20;
+}
+
+#private-header-profile_container.hidden {
+	visibility: hidden;
+  opacity: 0;
+}
+
+
+#private-header-username {
+	width: 100%;
+	border-bottom: 0.05vw solid var(--soft-black);
+	text-align: center;
+	padding: 0.8vw 1vw;
+}
+
+#private-header-profile_icon {
+	position: relative;
+	width: 2.5vw;
+	height: 2.5vw;
+	background-color: black;
+	border-radius: 100%;
+}

@@ -1,0 +1,24 @@
+#video-description-header_container {
+	width: 90vw;
+	padding: 2vw 0 0;
+}
+
+#video-description-content_container {
+	border: 0.01vw solid var(--soft-black);
+	padding: 2vw;
+	border-radius: 0.7vw;
+}
+
+#video-description-profile_container {
+	display: flex;
+	align-items: center;
+	margin: 1vw 0;
+}
+
+#video-description-profile-icon {
+	width: 3vw;
+	height: 3vw;
+	background-color: rgba(70, 112, 159, 0.707);
+	border-radius: 100%;
+	margin: 0 1vw 0 0;
+}
