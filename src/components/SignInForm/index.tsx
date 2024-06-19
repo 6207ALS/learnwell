@@ -19,6 +19,7 @@ function SignInForm() {
     e.preventDefault();
 
     const userID = [firstName, lastName].join("_");
+		console.log(userID);
     handleLogin(userID);
   }
 

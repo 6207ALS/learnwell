@@ -1,0 +1,64 @@
+#post-comment_form {
+	width: 90vw;
+	display: flex;
+	flex-direction: column;
+}
+
+#post-comment_button {
+	width: 100%;
+}
+
+.post-comment_input {
+	font-size: 1vw;
+	background: transparent; 
+	border: none;
+	border-bottom: 0.1vw solid gray;
+	z-index: 1;
+	margin: 1.5vw 0;
+	padding: 0.7vw 0;
+
+	transition: border-bottom 0.3s ease;
+}
+
+.post-comment_input:focus {
+	outline: none;
+	border-bottom: 0.1vw solid var(--soft-black);
+}
+
+.post-comment_input:focus::placeholder {
+	transition: color 0.3s ease;
+	color: var(--soft-black);
+}
+
+#post-comment-text_container,
+#post-comment-buttons_container {
+}
+
+#post-comment-buttons_container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.post-comment_button {
+	text-align: center;
+	width: 10vw;
+	font-size: 1vw;
+	padding: 0.5vw 2vw;
+	margin: 0 0 0 1vw;
+	
+	border: 0.08vw solid var(--soft-black);
+	border-radius: 2vw;
+	transition: background-color 0.3s, color 0.3s, opacity 0.2s;
+}
+
+.post-comment_button:hover {
+	background-color: var(--soft-black);
+	color: var(--light-sand);
+}
+
+.post-comment_button:disabled {
+	opacity: 0;
+	background: transparent;
+	border: 0.1vw solid gray;
+	color: gray;
+}

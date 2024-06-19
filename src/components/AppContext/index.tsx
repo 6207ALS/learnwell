@@ -1,8 +1,9 @@
-import { useState, useEffect, useReducer } from "react"
+import { useReducer } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import isUserLoggedIn from "../../helpers/isUserLoggedIn"
 import getUserID from "../../helpers/getUserID"
 import userReducer from "../../helpers/userReducer"
+import videosReducer from "../../helpers/userReducer"
 import appContext from "../../helpers/appContext"
 
 function AppContext({ children }: { children: React.ReactNode }) {
@@ -12,12 +13,14 @@ function AppContext({ children }: { children: React.ReactNode }) {
     userReducer, 
     { 
       isLoggedIn: isUserLoggedIn(),
-      userID: getUserID()
+      userID: getUserID(),
+      videos: []
     }
   )
 
   const handleLogin = (userID: string) => {
     const destination = location?.state?.from?.replace(":user_id", userID) || "/";
+		console.log(destination)
     localStorage.setItem("user_id", userID);
     setUser({ type: "login", userID })
     navigate(destination)
@@ -26,7 +29,7 @@ function AppContext({ children }: { children: React.ReactNode }) {
   const handleLogout = () => {
     localStorage.removeItem("user_id");
     setUser({ type: "logout" })
-    navigate("/")
+		navigate("/", { replace: true })
   }
 
   const appContextValue: AppContext = {

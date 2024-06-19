@@ -4,7 +4,7 @@ function needsBlobs(pathname: string): string {
 		"/about",
 		"/mission",
 		"/contact",
-		"/signin"
+		"/signin",
 	].includes(pathname);
 
 	return (isPageWithBlobs) ? "blobs" : pathname;

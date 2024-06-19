@@ -1,0 +1,6 @@
+#video-comments_container {
+	h2 {
+		border-bottom: 0.05vw solid var(--soft-black);
+		padding-bottom: 1vw;
+	}
+}
