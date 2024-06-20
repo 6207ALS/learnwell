@@ -2,8 +2,8 @@ import { useReducer } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import isUserLoggedIn from "../../helpers/isUserLoggedIn"
 import getUserID from "../../helpers/getUserID"
-import userReducer from "../../helpers/userReducer"
-import videosReducer from "../../helpers/userReducer"
+import userReducer from "../../reducers/userReducer"
+import videosReducer from "../../reducers/userReducer"
 import appContext from "../../helpers/appContext"
 
 function AppContext({ children }: { children: React.ReactNode }) {

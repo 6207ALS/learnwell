@@ -11,7 +11,7 @@ function PrivateRoute() {
 	const { user } = useContext(AppContext);
 
 	useEffect(() => {
-		if (!user.isLoggedIn) {
+		if (!user.isLoggedIn && location.pathname !== "/signin") {
 			navigate("/signin", { state: { from: location.pathname } });
 		}
 	}, [user.isLoggedIn, navigate, location.pathname]);

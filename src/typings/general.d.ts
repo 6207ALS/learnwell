@@ -17,6 +17,36 @@ interface UserState {
 	videos?: VideoObject[];
 }
 
+interface ModalState {
+	isVisible: boolean;
+}
+
+interface EditModalState extends ModalState {
+	selectedVideo: VideoObject;
+}
+
+interface VisibleEditModalAction {
+	type: "visible";
+	video: VideoObject;
+}
+
+interface InvisibleEditModalAction {
+	type: "invisible";
+}
+
+type EditModalAction = VisibleEditModalAction | InvisibleEditModalAction;
+type EditModalReducer = (state: EditModalState, action: EditModalAction) => EditModalState
+
+
+interface PostModalState extends ModalState {}
+
+interface PostModalAction {
+	type: "visible" | "invisible";
+}
+
+type PostModalReducer = (state: PostModalState, action: PostModalAction) => PostModalState
+
+
 interface AppContext {
 	user: UserState;
 	setUser: React.Dispatch<UserAction>;
@@ -40,9 +70,15 @@ interface VideoCardProps {
 }
 
 interface EditVideoModalProps {
-	video: VideoObject;
+	editModal: EditModalState;
 	handleEditVideo: (videoData: EditVideo) => Promise<void>;
 	dispatchEditModal: React.Dispatch<EditModalAction>;
+}
+
+interface PostVideoModalProps {
+	postModal: PostModalState;
+	handlePostVideo: (videoData: CreateVideo) => Promise<void>;
+	dispatchPostModal: React.Dispatch<PostModalAction>
 }
 
 type UserReducer = (state: UserState, action: UserAction) => UserState;

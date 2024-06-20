@@ -42,8 +42,8 @@ function VideoPage() {
 
   return video ? (
     <AnimatedComponent>
+      <PrivateHeader notification={notification} />
       <div id="video-page_container">
-        <PrivateHeader notification={notification} />
         <VideoPlayer video={video} />
         <VideoDescription video={video} />
         <PostCommentForm handleCreateComment={handleCreateComment} />

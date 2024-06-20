@@ -1,19 +1,16 @@
 import { memo, useState, useContext, useEffect } from "react";
-import { useParams } from 'react-router-dom';
-import AnimatedComponent from '../AnimatedComponent'
-import AppContext from "../../helpers/appContext"
-import videoService from "../../services/videoService"
+import MediaControls from "../MediaControls";
 
-import PrivateHeader from "../PrivateHeader"
-import Videos from "../Videos"
 import "./styles.css"
 
-const VideoPlayer = memo(({ video }: { video: VideoObject}) => {
+const VideoPlayer = memo(() => {
 	return (
 		<div id="video-player_container">
-			<iframe
-				src={video ? video.video_url : ""}></iframe>
-			{/* <MediaControls></MediaControls> */}
+			<video 
+				src={"https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"}
+				controls={false}
+			></video>
+			<MediaControls></MediaControls>
 		</div>
 	)
 });

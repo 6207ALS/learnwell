@@ -1,3 +1,9 @@
+#private-header_wrapper {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
 #private-header_container {
 	width: 90vw;
 	display: flex;

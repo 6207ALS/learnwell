@@ -4,63 +4,23 @@ import AnimatedComponent from '../AnimatedComponent'
 import AppContext from "../../helpers/appContext"
 import videoService from "../../services/videoService"
 import EditVideoModal from "../EditVideoModal";
+import PostVideoModal from "../PostVideoModal";
 
 import Notification from "../Notification"
 import PrivateHeader from "../PrivateHeader"
+import VideoPageSubheader from "../VideoPageSubheader"
 import Videos from "../Videos"
 
-interface VisibleEditModalState {
-	isVisible: true;
-	selectedVideo: VideoObject;
-}
-
-interface InvisibleEditModalState {
-	isVisible: false;
-}
-
-type EditModalState = VisibleEditModalState | InvisibleEditModalState;
-
-interface VisibleEditModalAction {
-	type: "visible";
-	video: VideoObject;
-}
-
-interface InvisibleEditModalAction {
-	type: "invisible";
-}
-
-type EditModalAction = VisibleEditModalAction | InvisibleEditModalAction;
-
-function editModalReducer(state: EditModalState, action: EditModalAction): EditModalState {
-	switch (action.type) {
-		case "visible": {
-			return {
-				...state,
-				isVisible: true,
-				selectedVideo: action.video,
-			}
-		}
-
-		case "invisible": {
-			return {
-				...state,
-				isVisible: false,
-			}
-		}
-	} 
-}
-
-const initialModalState: InvisibleEditModalState = {
-	isVisible: false
-}
-
+import { editModalReducer, initialEditModalState } from "../../reducers/editModalReducer"
+import { postModalReducer, initialPostModalState } from "../../reducers/postModalReducer"
 
 function VideosPage() {
   const { user_id: searchedUserID } = useParams();
   const [ notification, setNotification ] = useState<string>("");
   const [ videos, setVideos ] = useState<VideoObject[]>([]);
 
-	const [ editModal, dispatchEditModal ] = useReducer(editModalReducer, initialModalState)
+	const [ editModal, dispatchEditModal ] = useReducer(editModalReducer, initialEditModalState)
+	const [ postModal, dispatchPostModal ] = useReducer(postModalReducer, initialPostModalState)
 
   const notifyUser = (message: string): void => {
     setNotification(message);
@@ -79,8 +39,24 @@ function VideosPage() {
     }
   }
 
+	const handlePostVideo = async (videoData: CreateVideo) => {
+    try {
+      await videoService.createUserVideo(videoData);
+      notifyUser("Success: Uploaded Video");
+			dispatchPostModal({ type: "invisible"})
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        notifyUser(e.message);
+      }
+    }
+  }
+
 	const handleClickEditVideo = (video: VideoObject) => {
 		dispatchEditModal({ type: "visible", video })
+	}
+
+	const handleClickUploadVideo = () => {
+		dispatchPostModal({ type: "visible" })
 	}
 
   useEffect(() => {
@@ -101,18 +77,23 @@ function VideosPage() {
       <div id="videos-page_container">
         <Notification notification={notification} />
         <PrivateHeader />
+				<VideoPageSubheader 
+					handleClickUploadVideo={handleClickUploadVideo}
+				/>
         <Videos 
 					videos={videos} 
 					handleClickEditVideo={handleClickEditVideo}
 				/>
-				{
-					editModal.isVisible ? 
-						<EditVideoModal
-							video={editModal.selectedVideo}
-							handleEditVideo={handleEditVideo}
-							dispatchEditModal={dispatchEditModal}
-						/> : null
-				}
+				<EditVideoModal
+					editModal={editModal}
+					handleEditVideo={handleEditVideo}
+					dispatchEditModal={dispatchEditModal}
+				/>
+				<PostVideoModal 
+					postModal={postModal}
+					handlePostVideo={handlePostVideo}
+					dispatchPostModal={dispatchPostModal}
+				/>
       </div>
     </AnimatedComponent>
   )
