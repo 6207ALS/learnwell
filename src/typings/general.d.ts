@@ -8,30 +8,48 @@ interface VideoObject {
 interface UserAction {
 	type: "login" | "logout" | "set-videos";
 	userID?: string;
-	videos?: VideoObject[]
+	videos?: VideoObject[];
 }
 
 interface UserState {
 	isLoggedIn: boolean;
 	userID?: string;
-	videos?: VideoObject[]
+	videos?: VideoObject[];
 }
 
 interface AppContext {
-	user: UserState,
-	setUser: React.Dispatch<UserAction>
+	user: UserState;
+	setUser: React.Dispatch<UserAction>;
 	handleLogout: () => void;
 	handleLogin: (userID: string) => void;
 }
 
 interface PostCommentFormProps {
-	handleCreateComment: (commentData: string) => void
+	handleCreateComment: (commentData: string) => void;
 }
 
-type UserReducer = (state: UserState, action: UserAction) => UserState
+interface VideosProps {
+	videos: VideoObject[];
+	handleClickEditVideo: (video: VideoObject) => void;
+}
+
+interface VideoCardProps {
+	video: VideoObject;
+	canEdit: boolean;
+	handleClickEditVideo: (video: VideoObject) => void;
+}
+
+interface EditVideoModalProps {
+	video: VideoObject;
+	handleEditVideo: (videoData: EditVideo) => Promise<void>;
+	dispatchEditModal: React.Dispatch<EditModalAction>;
+}
+
+type UserReducer = (state: UserState, action: UserAction) => UserState;
+
 
 // GENERAL RESPONSE TYPES
-type HTTPResponse = HTTPSuccessResponse | HTTPValidationError
+type HTTPResponse = HTTPSuccessResponse | HTTPValidationError;
 
 interface HTTPValidationError {
 	detail: Item[];

@@ -52,6 +52,10 @@ function PrivateHeader() {
     }
   }, [isProfileModalVisible]);
 
+	const handleClickMyVideos = () => {
+		navigate(`/${user.userID}/videos`);
+	}
+
   useEffect(() => {
     const searchInput = document.querySelector("#search-video-bar_input")
     document.addEventListener('mousedown', handleClickOutside);
@@ -87,7 +91,10 @@ function PrivateHeader() {
         ref={profileModalRef}
         className={ isProfileModalVisible ? "" : "hidden" }>
         <h2 id="private-header-username">Account: {userName}</h2>
-        <button id="user-home_button">My Videos</button>
+        <button 
+					id="user-home_button"
+					onClick={handleClickMyVideos}
+				>My Videos</button>
         <button 
           id="signout_button"
           onClick={handleLogout}

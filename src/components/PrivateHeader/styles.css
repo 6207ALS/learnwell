@@ -7,7 +7,6 @@
 	border: 0.01vw solid var(--soft-black);
 	border-radius: 0.7vw;
 	margin: 2vw 0;
-	background-color: rgba(128, 128, 128, 0.227);
 }
 
 #signout_button,
@@ -30,18 +29,18 @@
 #search-video-bar_input {
 	width: 30%;
 	font-size: 1vw;
-	background: var(--light-sand); 
+	background: transparent; 
 	border: 0.01vw solid var(--soft-black);
 	border-radius: 1.5vw;
-	z-index: 1;
 
 	padding: 0.6vw 1.5vw; 
 
-	transition: border-bottom 0.3s ease;
+	transition: border-bottom 0.3s ease, background-color 0.3s ease;
 }
 
 #search-video-bar_input:focus {
 	outline: none;
+	background-color: var(--light-sand)
 }
 
 #search-video-bar_input:focus::placeholder {

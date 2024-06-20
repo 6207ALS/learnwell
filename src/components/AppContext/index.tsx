@@ -29,7 +29,7 @@ function AppContext({ children }: { children: React.ReactNode }) {
   const handleLogout = () => {
     localStorage.removeItem("user_id");
     setUser({ type: "logout" })
-		navigate("/", { replace: true })
+		navigate("/", { replace: false })
   }
 
   const appContextValue: AppContext = {
