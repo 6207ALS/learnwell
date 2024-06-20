@@ -11,7 +11,7 @@ import "./styles.css"
 import VideoCard from "../VideoCard"
 
 
-const Videos = memo(({ videos }: { videos: VideoObject[]}) => {
+const Videos = memo(({ videos, handleClickEditVideo }: VideosProps) => {
 	const { user } = useContext(AppContext);
   const { user_id: searchedUserID } = useParams();
 	const searchedUserName = searchedUserID?.split("_").join(" ")
@@ -27,6 +27,7 @@ const Videos = memo(({ videos }: { videos: VideoObject[]}) => {
 							key={video.id} 
 							video={video}
 							canEdit={canEdit}
+							handleClickEditVideo={handleClickEditVideo}
 						/>)) 
 					}
 				</div>
