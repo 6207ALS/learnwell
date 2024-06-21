@@ -1,6 +1,7 @@
-<div style="text-align: center">
+<p align="center">
 <img src="src/assets/read-me/education-readme.svg" width="300">
-</div>
+</p>
+
 
 # Learnwell: Educational Video Sharing Platform
 
@@ -32,16 +33,16 @@ Learnwell was developed with Vite. To build and preview the application, complet
 #### <ins>Landing Page</ins>
 The typical user flow for Learnwell begin at the landing page. The user can choose to learn more about the company or navigate to their personal videos.
 
-  <div style="text-align: center">
+  <p align="center">
    <img src="src/assets/read-me/userflow-1.png" width="600">
-  </div>
+  </p>
 
 #### <ins>Sign In</ins>
 If the user clicks "Watch Videos" and is not signed in, they are navigated to `/signin` and prompted to sign in as a user.
 
-  <div style="text-align: center">
+  <p align="center">
    <img src="src/assets/read-me/userflow-2.png" width="600">
-  </div>
+  </p>
 
 > [!NOTE]
 > Because the external backend API lacks an account creation service, the login process is simply entering the user's first and last names. Of course, this limits the functionality for the overall application. Most notably, all users who have the same first and last names will share the same account. These users will post videos, edit videos, and comment all under the same identity. In the real world, the backend would have an account creation service to uniquely identify all users and their personal content. 
@@ -50,9 +51,9 @@ If the user clicks "Watch Videos" and is not signed in, they are navigated to `/
 #### <ins>Homepage</ins>
 Once signed in, the user is navigated to a personal homepage that lists their uploaded videos.
 
-<div style="text-align: center">
+<p align="center">
  <img src="src/assets/read-me/userflow-3.png" width="600">
-</div>
+</p>
 
 > [!NOTE]
 > In a typical video sharing platform such as YouTube, users are navigated to a homepage after signing in. The homepage displays a curated list of videos
@@ -64,9 +65,9 @@ other users, limiting what type of content the homepage could display.
 #### <ins>Upload Video</ins>
 Users can click the "Upload" button to post a video, which opens a modal for the video's details
 
-<div style="text-align: center">
+<p align="center">
  <img src="src/assets/read-me/userflow-4.png" width="300">
-</div>
+</p>
 
 > [!NOTE]
 > Video URLs must be a direct video link, not an embed link. For testing purposes, you can use the following free, publicly hosted links to upload example videos: ([Source](https://gist.github.com/jsturgis/3b19447b304616f18657?permalink_comment_id=3658531))
@@ -81,17 +82,17 @@ Users can click the "Upload" button to post a video, which opens a modal for the
 #### <ins>Edit Video</ins>
 Users can hover over a video and click "Edit Video" to edit a video's title/description. Inputs are pre-populated with the video's details.
 
-<div style="text-align: center">
+<p align="center">
  <img src="src/assets/read-me/userflow-5.png" width="300">
-</div>
+</p>
 
 
 #### <ins>Headers (Public and Private)</ins>
 All routes in Learnwell display a Header component for informational pages (`About Us`, `Our Mission`, and `Contact Us`). Signed-in users additionally have access to a secondary header: 
 
-<div style="text-align: center">
+<p align="center">
  <img src="src/assets/read-me/userflow-6.png" width="600">
-</div>
+</p>
 
  - Users can navigate to another user's personal homepage by entering their `user_id` (`first_last`) in the search bar.
  - On the right, users can click on their profile icon to view their personal videos or sign out.
@@ -100,9 +101,9 @@ All routes in Learnwell display a Header component for informational pages (`Abo
 
 Clicking a video card in the homepage navigates the user to the video itself. The structure of the page is similar to sites such as YouTube or Vimeo - a video player followed by details about the video. 
 
-<div style="text-align: center">
+<p align="center">
  <img src="src/assets/read-me/userflow-7.png" width="600">
-</div>
+</p>
 
  - When the user's mouse hovers the video, the media controls appears.
  - Media controls include:
@@ -116,9 +117,9 @@ Clicking a video card in the homepage navigates the user to the video itself. Th
 
 Below the video player is a comment form and a list of comments posted by other users.
 
-<div style="text-align: center">
+<p align="center">
  <img src="src/assets/read-me/userflow-8.png" width="800">
-</div>
+</p>
 
 ## Tools/Libraries
 - TypeScript
