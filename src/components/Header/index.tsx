@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import './styles.css'
 
+// Public header, available to all users
 function Header(): JSX.Element {
-
   return (
 		<header id="header_container">
 			<nav id="nav_container">

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import "./styles.css"
-import VideoDescription from "../VideoDescription"
 
 
 function EditVideoModal({
@@ -12,6 +11,7 @@ function EditVideoModal({
 	const [ editVideoTitle, setEditVideoTitle ] = useState<string>(video.title)
 	const [ editVideoDescription, setEditVideoDescription ] = useState<string>(video.description)
 
+	// Ensure video's title and description inputs are populated
 	useEffect(() => {
 		setEditVideoTitle(video.title);
 		setEditVideoDescription(video.description);
@@ -44,8 +44,7 @@ function EditVideoModal({
 		setEditVideoDescription(e.target.value)
 	}
 
-	// Form values must be different from original value AND
-	// neither of the form entries should be empty
+	// Check if form inputs are not empty and different from original values
 	const validateForm = () => {
 		return !(
 			editVideoTitle.trim() && 

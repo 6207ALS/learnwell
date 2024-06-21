@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import "./styles.css";
 
 import beginning from "../../assets/about/beginning.svg"

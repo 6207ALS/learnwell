@@ -1,3 +1,4 @@
+// Reducer function to manage PostVideoModal component's state
 const postModalReducer: PostModalReducer = (state, action) => {
 	switch (action.type) {
 		case "visible": {

@@ -1,9 +1,9 @@
 import "./styles.css"
 
-function Hero() {
+function Contact() {
   return (
-		<div id="hero_container">
-			<div id="hero-text_container">
+		<div id="contact_container">
+			<div id="contact-text_container">
 				<h1>We'd love to hear from you.</h1>
 				<h2>Contact us: 6207als@gmail.com</h2>
 			</div>
@@ -11,4 +11,4 @@ function Hero() {
   )
 }
 
-export default Hero
+export default Contact

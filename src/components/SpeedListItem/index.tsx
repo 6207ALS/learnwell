@@ -1,6 +1,7 @@
 import "./styles.css"
 
-function SpeedListItem({ speed, handleSetPlaybackSpeed }) {
+// List option for media controls playback speed
+function SpeedListItem({ speed, handleSetPlaybackSpeed }: SpeedListItemProps) {
 	const onClickSpeed = () => {
 		handleSetPlaybackSpeed(speed);
 	}

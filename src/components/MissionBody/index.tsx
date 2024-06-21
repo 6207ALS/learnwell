@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import "./styles.css";
 
 import educationImage from "../../assets/mission/education.svg"

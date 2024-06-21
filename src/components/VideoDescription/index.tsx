@@ -1,14 +1,5 @@
-import { useState, useEffect, useContext } from "react"
-import { 
-	useNavigate, 
-	useLocation, 
-	Link, 
-	Navigate,
-	useParams
-} from "react-router-dom"
-import AppContext from "../../helpers/appContext"; 
-import "./styles.css"
 import parseDate from "../../helpers/parseDate"
+import "./styles.css"
 
 
 function VideoDescription({ video }: { video: VideoObject }) {

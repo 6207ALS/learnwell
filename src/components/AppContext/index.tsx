@@ -3,7 +3,6 @@ import { useNavigate, useLocation } from "react-router-dom"
 import isUserLoggedIn from "../../helpers/isUserLoggedIn"
 import getUserID from "../../helpers/getUserID"
 import userReducer from "../../reducers/userReducer"
-import videosReducer from "../../reducers/userReducer"
 import appContext from "../../helpers/appContext"
 
 function AppContext({ children }: { children: React.ReactNode }) {
@@ -20,7 +19,6 @@ function AppContext({ children }: { children: React.ReactNode }) {
 
   const handleLogin = (userID: string) => {
     const destination = location?.state?.from?.replace(":user_id", userID) || "/";
-		console.log(destination)
     localStorage.setItem("user_id", userID);
     setUser({ type: "login", userID })
     navigate(destination)

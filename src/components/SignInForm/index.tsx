@@ -1,9 +1,9 @@
-import { useState, useEffect, useContext } from "react"
-import { useNavigate, useLocation, Link, Navigate } from "react-router-dom"
+import { useState, useContext } from "react"
+import { Link } from "react-router-dom"
 import AppContext from "../../helpers/appContext"; 
 import "./styles.css"
 
-
+// Form to sign into Learnwell
 function SignInForm() {
   const { handleLogin } = useContext(AppContext);
 
@@ -19,7 +19,6 @@ function SignInForm() {
     e.preventDefault();
 
     const userID = [firstName, lastName].join("_");
-		console.log(userID);
     handleLogin(userID);
   }
 

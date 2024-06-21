@@ -1,7 +1,3 @@
-interface Months {
-	[month: number]: string;
-}
-
 const months: Months = {
 	0: "January",
 	1: "February",
@@ -17,6 +13,7 @@ const months: Months = {
 	11: "December",
 }
 
+// Convert Date/timestamp into readable format
 function parseDate(dateString: string): string {
 	const date = new Date(dateString);
 

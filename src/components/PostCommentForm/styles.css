@@ -30,10 +30,6 @@
 	color: var(--soft-black);
 }
 
-#post-comment-text_container,
-#post-comment-buttons_container {
-}
-
 #post-comment-buttons_container {
 	display: flex;
 	justify-content: flex-end;

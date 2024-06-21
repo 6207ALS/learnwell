@@ -22,12 +22,12 @@ const getVideoComments: GetVideoComments = async (videoID: string): Promise<Comm
 		}
 	} catch (e: unknown) {
 		if (e instanceof Error) {
-			throw Error;
+			throw new Error(e.message);
 		}
 	}
 }
 
-const createVideoComments: CreateVideoComment = async (commentData: CreateComment): Promise<CreateUserVideoSuccessResponse | void> => {
+const createVideoComment: CreateVideoComment = async (commentData: CreateComment): Promise<CreateUserVideoSuccessResponse | void> => {
 	try {
 		const response = await fetch(`${BASE_URL}/comments`, {
 			method: "POST",
@@ -45,12 +45,12 @@ const createVideoComments: CreateVideoComment = async (commentData: CreateCommen
 		}
 	} catch (e: unknown) {
 		if (e instanceof Error) {
-			throw Error;
+			throw new Error(e.message);
 		}
 	}
 }
 
 export default {
 	getVideoComments,
-	createVideoComments,
+	createVideoComment,
 }

@@ -18,6 +18,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 	a {
 		font-size: 1.2vw;
 
@@ -25,14 +26,14 @@
 
 		transition: border-bottom 0.3s ease;
 	}
-
-	a:hover {
-		border-bottom: 0.06vw solid #35383961;
-	}
 }
 
 #nav-buttons_container {
 	a {
 		margin: 0 0 0 2vw;
+	}
+
+	a:hover {
+		border-bottom: 0.06vw solid #35383961;
 	}
 }

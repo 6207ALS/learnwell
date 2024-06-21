@@ -17,7 +17,7 @@
 	color: white;
 	position: absolute;
 	bottom: -4vw;
-	background-color: rgba(255, 255, 255, 0);
+	background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.63));
 	width: 100%;
 	height: 4vw;
 
@@ -31,12 +31,26 @@
 		width: 1.4vw;
 		height: 1.4vw;
 		z-index: 5;
+		transition: width 0.2s ease, height 0.2s ease;
 	}
 
-	#bar_container {
+	#progress_container {
+		position: relative;
 		width: 100%;
 		height: 10%;
-		background-color: gray;
+	}
+	
+	#total-duration-bar {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(185, 185, 185, 0.771);
+	}
+	
+	#progress-bar {
+		position: absolute;
+		height: 100%;
+		background-color: rgb(44, 111, 255);
 	}
 
 	#controls_container {
@@ -52,7 +66,6 @@
 		#volume_container:hover #volume-bar_wrapper {
 			width: 6.5vw;
 		}
-
 
 		#volume-bar_wrapper {
 			position: relative;
@@ -87,8 +100,23 @@
 		#volume-current {
 			position: absolute;
 			height: 100%;
-			width: 50%;
+			width: 0;
 			background-color: white;
+		}
+
+		#time_container {
+			width: 7vw;
+			display: flex;
+			justify-content: space-between;
+
+		}
+
+		.media-time {
+			text-align: center;
+		}
+
+		span {
+			font-size: 1vw;
 		}
 	}
 
@@ -120,12 +148,13 @@
 		#playback-list_wrapper {
 			position: absolute;
 			bottom: 200%;
+			
 			display: flex;
 			opacity: 0;
 			visibility: hidden;
 			justify-content: center;
 			transition: opacity 0.3s ease, visibility 0.3s ease;
-			transition-delay: 1s;
+			transition-delay: 0.3s;
 		}
 
 		#playback-list_container {
@@ -155,7 +184,7 @@
 	#speed_container:hover #playback-list_wrapper {
 		opacity: 1;
 		visibility: visible;
-		transition: opacity 0.3s ease;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
 	}
 }
 

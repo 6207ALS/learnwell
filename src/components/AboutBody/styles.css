@@ -1,10 +1,11 @@
 h1 {
-	font-size: 2.3rem;
+	font-size: 1.7vw;
 }
 
 h2 {
-	font-size: 1.5rem;
+	font-size: 1.2vw;
 }
+
 
 #about-body_container {
 	margin: 95vh 0 0 0;
@@ -17,12 +18,31 @@ h2 {
 	
 	border-top: 1px solid var(--soft-black);
 	box-sizing: border-box;
-}
 
-img {
-	position: relative;
-	z-index: -1;
-	width: 23vw;
+	img {
+		position: relative;
+		z-index: -1;
+		width: 23vw;
+	}
+
+	
+	@media only screen and (min-width: 2300px) {
+		h1 {
+			font-size: 1.3vw;
+		}
+
+		h2 {
+			font-size: 0.8vw;
+		}
+
+		img {
+			width: 18vw;
+		}
+
+		.about-text_container {
+			width: 20vw
+		}
+	}
 }
 
 .about-section_container {

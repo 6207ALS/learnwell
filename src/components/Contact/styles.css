@@ -1,4 +1,4 @@
-#hero_container {
+#contact_container {
 	position: absolute;
 	width: 90vw;
 	height: 100vh;
@@ -17,17 +17,17 @@
 	}
 }
 
-#hero-text_container,
-#hero-buttons_container {
+#contact-text_container,
+#contact-buttons_container {
 	width: 40vw;
 }
 
-#hero-buttons_container {
+#contact-buttons_container {
 	display: flex;
 	justify-content: space-between;
 }
 
-.hero_button {
+.contact_button {
 	font-size: 1.5vw;
 	padding: 0.5vw 2.2vw;
 	margin: 2vw 0;
@@ -39,7 +39,7 @@
 	transition: background-color 0.3s, color 0.3s;
 }
 
-.hero_button:hover {
+.contact_button:hover {
 	background-color: var(--soft-black);
 	color: var(--light-sand);
 }

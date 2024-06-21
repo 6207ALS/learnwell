@@ -13,6 +13,8 @@
 	border: 0.01vw solid var(--soft-black);
 	border-radius: 0.7vw;
 	margin: 2vw 0;
+	
+	
 }
 
 #signout_button,
@@ -91,6 +93,6 @@
 	position: relative;
 	width: 2.5vw;
 	height: 2.5vw;
-	background-color: black;
+	background-color: rgba(126, 146, 202, 0.71);
 	border-radius: 100%;
 }

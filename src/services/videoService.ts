@@ -24,7 +24,7 @@ const getUserVideos: GetUserVideos = async (userID: string): Promise<VideoObject
 		}
 	} catch (e: unknown) {
 		if (e instanceof Error) {
-			throw Error;
+			throw new Error(e.message);
 		}
 	}
 }
@@ -47,7 +47,7 @@ const createUserVideo: CreateUserVideo = async (videoData: CreateVideo): Promise
 		}
 	} catch (e: unknown) {
 		if (e instanceof Error) {
-			throw Error;
+			throw new Error(e.message);
 		}
 	}
 }
@@ -70,7 +70,7 @@ const editUserVideo: EditUserVideo = async (videoData: EditVideo): Promise<EditU
 		}
 	} catch (e: unknown) {
 		if (e instanceof Error) {
-			throw Error;
+			throw new Error(e.message);
 		}
 	}
 }
@@ -89,7 +89,7 @@ const getSingleVideo: GetSingleVideo = async (videoID: string): Promise<VideoObj
 		}
 	} catch (e: unknown) {
 		if (e instanceof Error) {
-			throw Error;
+			throw new Error(e.message);
 		}
 	}
 }
