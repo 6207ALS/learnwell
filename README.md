@@ -1,5 +1,5 @@
 <p align="center">
-<img src="src/assets/read-me/education-readme.svg" width="300">
+<img src="src/assets/read-me/education-readme.svg" width="500">
 </p>
 
 
