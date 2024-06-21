@@ -45,7 +45,7 @@ If the user clicks "Watch Videos" and is not signed in, they are navigated to `/
   </p>
 
 > [!NOTE]
-> Because the external backend API lacks an account creation service, the login process is simply entering the user's first and last names. Of course, this limits the functionality for the overall application. Most notably, all users who have the same first and last names will share the same account. These users will post videos, edit videos, and comment all under the same identity. In the real world, the backend would have an account creation service to uniquely identify all users and their personal content. 
+> Because the external backend API lacks an account creation service, the login process is simply entering the user's first and last names. Of course, this limits the functionality for the overall application. All users who have the same first and last names will share the same account. These users will post videos, edit videos, and comment all under the same identity. In the real world, the backend would have an account creation service to uniquely identify all users and their personal content. 
 
 
 #### <ins>Homepage</ins>
