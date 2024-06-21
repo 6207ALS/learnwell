@@ -66,7 +66,7 @@ other users, limiting what type of content the homepage could display.
 Users can click the "Upload" button to post a video, which opens a modal for the video's details
 
 <p align="center">
- <img src="src/assets/read-me/userflow-4.png" width="300">
+ <img src="src/assets/read-me/userflow-4.png" width="500">
 </p>
 
 > [!NOTE]
@@ -83,7 +83,7 @@ Users can click the "Upload" button to post a video, which opens a modal for the
 Users can hover over a video and click "Edit Video" to edit a video's title/description. Inputs are pre-populated with the video's details.
 
 <p align="center">
- <img src="src/assets/read-me/userflow-5.png" width="300">
+ <img src="src/assets/read-me/userflow-5.png" width="500">
 </p>
 
 
@@ -91,7 +91,7 @@ Users can hover over a video and click "Edit Video" to edit a video's title/desc
 All routes in Learnwell display a Header component for informational pages (`About Us`, `Our Mission`, and `Contact Us`). Signed-in users additionally have access to a secondary header: 
 
 <p align="center">
- <img src="src/assets/read-me/userflow-6.png" width="600">
+ <img src="src/assets/read-me/userflow-6.png" width="700">
 </p>
 
  - Users can navigate to another user's personal homepage by entering their `user_id` (`first_last`) in the search bar.
