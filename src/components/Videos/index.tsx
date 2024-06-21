@@ -9,18 +9,16 @@ import {
 import AppContext from "../../helpers/appContext"; 
 import "./styles.css"
 import VideoCard from "../VideoCard"
-
+import AnimatedComponent from "../AnimatedComponent";
 
 const Videos = memo(({ videos, handleClickEditVideo }: VideosProps) => {
 	const { user } = useContext(AppContext);
   const { user_id: searchedUserID } = useParams();
-	const searchedUserName = searchedUserID?.split("_").join(" ")
 	const canEdit = searchedUserID === user.userID
 
 	return (
-		<>
+		<AnimatedComponent>
 			<div id="videos_container">
-				<h1>{searchedUserName}'s Videos:</h1>
 				<div id="video-cards_container">
 					{
 						videos.map(video => (<VideoCard 
@@ -32,7 +30,7 @@ const Videos = memo(({ videos, handleClickEditVideo }: VideosProps) => {
 					}
 				</div>
 			</div>
-		</>
+		</AnimatedComponent>
 	)
 })
 

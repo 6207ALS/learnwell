@@ -1,17 +1,24 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./styles.css"
 import VideoDescription from "../VideoDescription"
 
 
 function EditVideoModal({
-	video,
 	handleEditVideo,
-	dispatchEditModal
+	dispatchEditModal,
+	editModal,
 }: EditVideoModalProps) {
+	const video = editModal.selectedVideo;
 	const [ editVideoTitle, setEditVideoTitle ] = useState<string>(video.title)
 	const [ editVideoDescription, setEditVideoDescription ] = useState<string>(video.description)
 
-	const handleSubmitEditVideo = () => {
+	useEffect(() => {
+		setEditVideoTitle(video.title);
+		setEditVideoDescription(video.description);
+	}, [video.title, video.description])
+
+	const handleSubmitEditVideo = (e: React.FormEvent) => {
+		e.preventDefault();
 		const videoData: EditVideo = {
 			video_id: video.id,
 			title: editVideoTitle,
@@ -44,13 +51,15 @@ function EditVideoModal({
 			editVideoTitle.trim() && 
 			editVideoDescription.trim() && 
 			(editVideoTitle !== video.title ||
-			editVideoDescription !== video.description		)
+			editVideoDescription !== video.description)
 		)
 	}
 
 	return (
 		<>
-			<div id="edit-video-modal_container">
+			<div 
+				id="edit-video-modal_container"
+				className={editModal.isVisible ? "visible" : ""}>
 				<div id="edit-video-modal">
 					<h1>Edit: "{video.title}"</h1>
 					<form
@@ -92,11 +101,11 @@ function EditVideoModal({
 
 					</form>
 				</div>
+				<div 
+					id="edit-video-modal-overlay"
+					onClick={handleClickModalOverlay}
+				></div>
 			</div>
-			<div 
-				id="edit-video-modal-overlay"
-				onClick={handleClickModalOverlay}
-			></div>
 		</>
 	)
 }
