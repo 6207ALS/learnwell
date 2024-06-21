@@ -1,7 +1,8 @@
-import { useState, useEffect, useContext } from "react"
+import { useState, useContext } from "react"
 import AppContext from "../../helpers/appContext"
 import "./styles.css"
 
+// Modal to edit a user's video
 function PostVideoModal({
 	handlePostVideo,
 	dispatchPostModal,
@@ -46,9 +47,7 @@ function PostVideoModal({
 		setPostVideoUrl(e.target.value)
 	}
 	
-
-	// Form values must be different from original value AND
-	// neither of the form entries should be empty
+	// Check if all form inputs are not empty
 	const validateForm = () => {
 		return !(
 			postVideoTitle.trim() && 
@@ -60,16 +59,16 @@ function PostVideoModal({
 	return (
 		<>
 			<div 
-				id="edit-video-modal_container"
+				id="post-video-modal_container"
 				className={postModal.isVisible ? "visible" : ""}>
-				<div id="edit-video-modal">
-					<h1>Upload a Video</h1>
+				<div id="post-video-modal">
+					<h1>Upload New Video</h1>
 					<form
-						id="edit-video_form"
+						id="post-video_form"
 						onSubmit={handleSubmitPostVideo}>
-						<div className="edit-video-input_container">
+						<div className="post-video-input_container">
 							<label 
-								id="edit-title_label" 
+								id="post-title_label" 
 								htmlFor="">Title:</label>
 							<input
 								type="text"
@@ -78,9 +77,9 @@ function PostVideoModal({
 							/>
 						</div>
 
-						<div className="edit-video-input_container">
+						<div className="post-video-input_container">
 							<label 
-								id="edit-description_label" 
+								id="post-description_label" 
 								htmlFor="">Description:</label>
 							<textarea
 								onChange={handleDescriptionChange}
@@ -88,9 +87,9 @@ function PostVideoModal({
 							/>
 						</div>
 
-						<div className="edit-video-input_container">
+						<div className="post-video-input_container">
 							<label 
-								id="edit-url_label" 
+								id="post-url_label" 
 								htmlFor="">Video URL:</label>
 							<input
 								type="text"
@@ -99,17 +98,17 @@ function PostVideoModal({
 							/>
 						</div>
 
-						<div id="edit-video-buttons_container">
+						<div id="post-video-buttons_container">
 							<button
-								className="edit-video_button"
+								className="post-video_button"
 								type="button"
 								onClick={handleClickCancelButton}
 							>Cancel</button>
 							<button
-								className="edit-video_button" 
+								className="post-video_button" 
 								type="submit"
 								disabled={validateForm()}
-							>Save Changes</button>
+							>Upload</button>
 						</div>
 
 					</form>

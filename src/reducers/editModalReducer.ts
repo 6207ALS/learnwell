@@ -1,3 +1,4 @@
+// Reducer function to manage EditVideoModal component's state
 const editModalReducer: EditModalReducer = (state, action) => {
 	switch (action.type) {
 		case "visible": {

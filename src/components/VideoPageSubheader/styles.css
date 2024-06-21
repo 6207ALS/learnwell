@@ -1,16 +1,21 @@
+
 #video-page-subheader {
 	width: 90vw;
 	display: flex;
 	justify-content: space-between;
 	padding: 0.8vw;
 	border-bottom: 0.01vw solid var(--soft-black);
+
+	h1 {
+		font-size: 2vw;
+	}
 }
 
 #video-page-subheader-upload_button {
 	text-align: center;
-	width: 5vw;
-	font-size: 0.7vw;
-	padding: 0.5vw 0.5vw;
+	width: 6vw;
+	font-size: 1vw;
+	padding: 0.5vw 1.3vw;
 	margin: 0 0 0 1vw;
 	
 	border: 0.08vw solid var(--soft-black);

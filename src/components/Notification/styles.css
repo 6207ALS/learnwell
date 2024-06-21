@@ -1,0 +1,21 @@
+#notification_container {
+	position: fixed;
+	top: 1vw;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: rgba(255, 255, 255, 0.259);
+	border: 0.05vw solid var(--soft-black);
+	border-radius: 3vw;
+	padding: 1vw 2vw;
+	opacity: 0;
+	visibility: hidden;
+
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#notification_container.visible {
+	opacity: 1;
+	visibility: visible;
+
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}

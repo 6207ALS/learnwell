@@ -17,7 +17,7 @@ function uploadDate(dateString: string): string {
   const upload: Date = new Date(dateString);
     const current: Date = currentDateInUTC();
 
-    // Convert both dates to UTC timestamps (epoch)
+    // Convert both dates to UTC timestamps
     const uploadTimestamp = upload.getTime();
     const currentTimestamp = current.getTime();
 
@@ -44,7 +44,7 @@ function uploadDate(dateString: string): string {
       }
       // Calculate the difference in minutes
       const differenceMinutes = Math.floor(differenceMs / (1000 * 60));
-      if (differenceMinutes > 0) {
+      if (differenceMinutes > 5) {
         return `${differenceMinutes} minute${differenceMinutes > 1 ? "s" : ""} ago`;
       }
       return `Uploaded just now`;

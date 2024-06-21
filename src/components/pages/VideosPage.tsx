@@ -1,14 +1,13 @@
-import { useState, useContext, useEffect, useReducer } from "react";
+import { useState, useEffect, useReducer } from "react";
 import { useParams } from 'react-router-dom';
 import AnimatedComponent from '../AnimatedComponent'
-import AppContext from "../../helpers/appContext"
 import videoService from "../../services/videoService"
 import EditVideoModal from "../EditVideoModal";
 import PostVideoModal from "../PostVideoModal";
 
 import Notification from "../Notification"
 import PrivateHeader from "../PrivateHeader"
-import VideoPageSubheader from "../VideoPageSubheader"
+import VideosPageSubheader from "../VideoPageSubheader"
 import Videos from "../Videos"
 
 import { editModalReducer, initialEditModalState } from "../../reducers/editModalReducer"
@@ -22,19 +21,14 @@ function VideosPage() {
 	const [ editModal, dispatchEditModal ] = useReducer(editModalReducer, initialEditModalState)
 	const [ postModal, dispatchPostModal ] = useReducer(postModalReducer, initialPostModalState)
 
-  const notifyUser = (message: string): void => {
-    setNotification(message);
-    setTimeout(() => { setNotification("") }, 5000)
-  }
-
   const handleEditVideo = async (videoData: EditVideo) => {
     try {
       await videoService.editUserVideo(videoData);
-      notifyUser("Success: Saved Changes to Video");
-			dispatchEditModal({ type: "invisible"})
+      setNotification("Success: Saved changes to video");
+			dispatchEditModal({ type: "invisible" })
     } catch (e: unknown) {
       if (e instanceof Error) {
-        notifyUser(e.message);
+        setNotification(`Error: ${e.message}`);
       }
     }
   }
@@ -42,11 +36,11 @@ function VideosPage() {
 	const handlePostVideo = async (videoData: CreateVideo) => {
     try {
       await videoService.createUserVideo(videoData);
-      notifyUser("Success: Uploaded Video");
+      setNotification("Success: Uploaded video");
 			dispatchPostModal({ type: "invisible"})
     } catch (e: unknown) {
       if (e instanceof Error) {
-        notifyUser(e.message);
+        setNotification(`Error: ${e.message}`);
       }
     }
   }
@@ -66,18 +60,18 @@ function VideosPage() {
         setVideos(returnedVideos ? returnedVideos : []);
       } catch (e: unknown) {
         if (e instanceof Error) {
-          notifyUser(e.message);
+          setNotification(e.message);
         }
       }
     })();
-  }, [searchedUserID])
+  }, [searchedUserID, postModal.isVisible, editModal.isVisible])
 
   return (
     <AnimatedComponent>
       <div id="videos-page_container">
-        <Notification notification={notification} />
+        { notification ? <Notification notification={notification} /> : null }
         <PrivateHeader />
-				<VideoPageSubheader 
+				<VideosPageSubheader 
 					handleClickUploadVideo={handleClickUploadVideo}
 				/>
         <Videos 

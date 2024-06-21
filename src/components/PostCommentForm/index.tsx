@@ -1,13 +1,9 @@
-import { useState, useEffect, useContext } from "react"
-import { useNavigate, useLocation, Link, Navigate } from "react-router-dom"
-import AppContext from "../../helpers/appContext"; 
+import { useState } from "react"
 import "./styles.css"
 
-
+// Form to comment on a video
 function PostCommentForm({ handleCreateComment }: PostCommentFormProps) {
-
   const [ comment, setComment ] = useState("");
-
 
   const validateForm = () => {
     return !(comment.trim());
@@ -15,12 +11,8 @@ function PostCommentForm({ handleCreateComment }: PostCommentFormProps) {
 
   const handleSubmitForm = (e: React.FormEvent) => {
     e.preventDefault();
-
-		const commentData = {
-
-		}
-
-    handleCreateComment(commentData);
+    handleCreateComment(comment);
+		setComment("");
   }
 
 	const handleCancelComment = () => {

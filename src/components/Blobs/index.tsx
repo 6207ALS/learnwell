@@ -2,13 +2,13 @@ import './styles.css'
 import { useLocation } from 'react-router-dom'
 import { useEffect, useRef } from 'react';
 
-
 function Blobs(): JSX.Element {
   const location = useLocation() 
   const blobA = useRef<HTMLDivElement>(null);
   const blobB = useRef<HTMLDivElement>(null);
   const blobC = useRef<HTMLDivElement>(null);
 
+	// Changes colors of blobs based on route
   useEffect(() => {
     const path = location.pathname;
     if (path === "/") {

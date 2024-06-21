@@ -1,3 +1,4 @@
+// Reducer function to manage user's login state and videos
 function userReducer(state: UserState, action: UserAction): UserState {
 	switch (action.type) {
 		case "login": {

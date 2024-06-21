@@ -5,11 +5,11 @@ import {
   useEffect, 
   useContext
 } from "react"
-import { useNavigate, useLocation, Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import AppContext from "../../helpers/appContext"; 
 import "./styles.css"
 
-
+// Header available to only users that are signed in
 function PrivateHeader() {
   const navigate = useNavigate();
   const { user, handleLogout } = useContext(AppContext);
@@ -23,6 +23,7 @@ function PrivateHeader() {
     setIsProfileModalVisible(prev => !prev);
   }
 
+  // Navigates to /:user_id/videos, :user_id being input value
   const handleSearchUser = useCallback((event: KeyboardEvent) => {
     const { activeElement } = document;
     const searchUserInput = event.currentTarget;
@@ -36,6 +37,7 @@ function PrivateHeader() {
     setSearchValue(e.target.value);
   }
 
+  // Close profile details modal if open
   const handleClickOutside = useCallback((event: MouseEvent) => {
     if (isProfileModalVisible) {
       const modalElement = document.querySelector('#private-header-profile_container');
@@ -56,6 +58,7 @@ function PrivateHeader() {
     navigate(`/${user.userID}/videos`);
   }
 
+  // Register event listeners for "search user video" and "close profile details"
   useEffect(() => {
     const searchInput = document.querySelector("#search-video-bar_input")
     document.addEventListener('mousedown', handleClickOutside);

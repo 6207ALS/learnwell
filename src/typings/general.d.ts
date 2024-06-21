@@ -5,6 +5,10 @@ interface VideoObject {
   title: string;
 }
 
+interface Months {
+	[month: number]: string;
+}
+
 interface UserAction {
 	type: "login" | "logout" | "set-videos";
 	userID?: string;
@@ -81,6 +85,22 @@ interface PostVideoModalProps {
 	dispatchPostModal: React.Dispatch<PostModalAction>
 }
 
+interface VideosPageSubheaderProps {
+	handleClickUploadVideo: () => void;
+}
+
+interface SpeedListItemProps {
+	speed: number;
+	handleSetPlaybackSpeed: (speed: number) => void;
+}
+
+interface MediaControlsProps {
+	videoRef: React.RefObject<HTMLVideoElement>;
+	isPlaying: boolean;
+	handleTogglePlay: () => void;
+	handleToggleFullScreen: () => void;
+}
+
 type UserReducer = (state: UserState, action: UserAction) => UserState;
 
 
@@ -98,7 +118,7 @@ interface Item {
 	input?: {
 		video_id?: string;
 		description?: string;
-		title: string;
+		title?: string;
 	}
 }
 

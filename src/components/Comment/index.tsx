@@ -1,16 +1,7 @@
-import { memo, useState, useEffect, useContext } from "react"
-import { 
-	useNavigate, 
-	useLocation, 
-	Link, 
-	Navigate,
-	useParams
-} from "react-router-dom"
-import AppContext from "../../helpers/appContext"; 
 import "./styles.css"
 import parseDate from "../../helpers/parseDate"
-import commentService from "../../videoService"
 
+// A single comment from a video
 const Comment = ({ comment }: { comment: CommentObject }) => {
 	return (
 		<div className="video-comment_container">

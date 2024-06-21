@@ -1,6 +1,14 @@
 #video-description-header_container {
 	width: 90vw;
 	padding: 2vw 0 0;
+
+	h1 {
+		font-size: 2vw;
+	}
+
+	h2 {
+		font-size: 1.3vw;
+	}
 }
 
 #video-description-content_container {

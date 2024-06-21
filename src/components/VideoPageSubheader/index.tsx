@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import AppContext from "../../helpers/appContext" 
 import "./styles.css"
 
-function VideoPageSubheader({ handleClickUploadVideo }) {
+function VideosPageSubheader({ handleClickUploadVideo }: VideosPageSubheaderProps) {
 	const { user } = useContext(AppContext);
 	const { user_id: searchedUserID } = useParams();
 	const searchedUserName = searchedUserID?.split("_").join(" ")
@@ -27,4 +27,4 @@ function VideoPageSubheader({ handleClickUploadVideo }) {
 	)
 }
 
-export default VideoPageSubheader
+export default VideosPageSubheader

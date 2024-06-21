@@ -3,6 +3,9 @@ import appContext from "../../helpers/appContext"
 import { Link } from "react-router-dom"
 import "./styles.css"
 
+// Landing page
+// "Watch Videos" button navigates user to /signin or /:user_id/videos
+// depending on if they are signed in or not.
 function Hero() {
   const { user } = useContext(appContext);
   const { userID } = user;

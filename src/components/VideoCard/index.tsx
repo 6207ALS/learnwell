@@ -1,16 +1,8 @@
-import { useState, useEffect, useContext } from "react"
-import { 
-	useNavigate, 
-	useLocation, 
-	Link, 
-	Navigate,
-	useParams
-} from "react-router-dom"
-import AppContext from "../../helpers/appContext"; 
+import { useNavigate } from "react-router-dom"
 import "./styles.css"
 import uploadDate from "../../helpers/uploadDate"
 
-
+// Video card displayed for a single video in /:user_id/videos
 function VideoCard({ video, canEdit, handleClickEditVideo }: VideoCardProps) {
 	const navigate = useNavigate();
 
