@@ -128,6 +128,8 @@ Below the video player is a comment form and a list of comments posted by other 
 - React Router (`Router`, `Route`, `useNavigate`, `useLocation`)
 - Figma & CSS 
 
+## Test Account
+To view an account with seed data, sign in as Allen Lee (case-sensitive, first name: Allen, last name: Lee). Visit the video titled "A Crash Course on Biology" to view a video with comments.
 
 ## Future Improvements
 
